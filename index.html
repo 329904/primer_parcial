@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer Parcial</title>
+</head>
+
+<body>
+
+    <table>
+
+
+        <tr>
+            <th>
+                <h3>Mesa 1</h3>
+            </th>
+            <th>
+                <h3>Mesa 2</h3>
+            </th>
+            <th>
+                <h3>Mesa 3</h3>
+            </th>
+        </tr>
+
+
+        <tr>
+            <td>
+                <img src="images/mesaApagada.png" id="mesa_1" onclick="cambiarMesa_1();">
+
+                <script>
+                    function cambiarMesa_1() {
+
+                        var t;
+
+
+                        element = document.getElementById("mesa_1")
+
+                        if (element.src.match("mesaApagada")) {
+                            element.src = "images/mesaPrendida.png";
+
+
+                            momentoActual = new Date()
+                            hora = momentoActual.getHours()
+                            minuto = momentoActual.getMinutes()
+                            segundo = momentoActual.getSeconds()
+
+                            var mesa_inicio = hora + " : " + minuto + " : " + segundo
+
+                            document.form_r1_inicio.reloj.value = mesa_inicio
+
+
+
+                        }
+                        else {
+                            element.src = "images/mesaApagada.png";
+
+                            momentoActual2 = new Date()
+                            hora2 = momentoActual2.getHours()
+                            minuto2 = momentoActual2.getMinutes()
+                            segundo2 = momentoActual2.getSeconds()
+
+                            var mesa_final = hora2 + " : " + minuto2 + " : " + segundo2
+
+                            document.form_r1_final.reloj.value = mesa_final
+
+                            let diferencia = (momentoActual2.getTime() - momentoActual.getTime()) / 1000;
+
+                            t = (diferencia * 50) / 3600;
+
+                            document.getElementById("total1").innerHTML = t.toFixed(2);
+
+
+
+                        }
+
+
+
+
+
+                    }
+                </script>
+
+            </td>
+
+            <td>
+                <img src="images/mesaApagada.png" id="mesa_2" onclick="cambiarMesa_2();">
+
+                <script>
+                    function cambiarMesa_2() {
+
+                        var t;
+
+
+                        element = document.getElementById("mesa_2")
+
+                        if (element.src.match("mesaApagada")) {
+                            element.src = "images/mesaPrendida.png";
+
+
+                            momentoActual = new Date()
+                            hora = momentoActual.getHours()
+                            minuto = momentoActual.getMinutes()
+                            segundo = momentoActual.getSeconds()
+
+                            var mesa_inicio = hora + " : " + minuto + " : " + segundo
+
+                            document.form_r2_inicio.reloj.value = mesa_inicio
+
+
+
+                        }
+                        else {
+                            element.src = "images/mesaApagada.png";
+
+                            momentoActual2 = new Date()
+                            hora2 = momentoActual2.getHours()
+                            minuto2 = momentoActual2.getMinutes()
+                            segundo2 = momentoActual2.getSeconds()
+
+                            var mesa_final = hora2 + " : " + minuto2 + " : " + segundo2
+
+                            document.form_r2_final.reloj.value = mesa_final
+
+                            let diferencia = (momentoActual2.getTime() - momentoActual.getTime()) / 1000;
+
+                            t = (diferencia * 50) / 3600;
+
+                            document.getElementById("total2").innerHTML = t.toFixed(2);
+
+
+
+                        }
+
+
+
+
+
+                    }
+                </script>
+
+            </td>
+
+            <td>
+                <img src="images/mesaApagada.png" id="mesa_3" onclick="cambiarMesa_3();">
+
+                <script>
+                    function cambiarMesa_3() {
+
+                        var t;
+
+
+                        element = document.getElementById("mesa_3")
+
+                        if (element.src.match("mesaApagada")) {
+                            element.src = "images/mesaPrendida.png";
+
+
+                            momentoActual = new Date()
+                            hora = momentoActual.getHours()
+                            minuto = momentoActual.getMinutes()
+                            segundo = momentoActual.getSeconds()
+
+                            var mesa_inicio = hora + " : " + minuto + " : " + segundo
+
+                            document.form_r3_inicio.reloj.value = mesa_inicio
+
+
+
+                        }
+                        else {
+                            element.src = "images/mesaApagada.png";
+
+                            momentoActual2 = new Date()
+                            hora2 = momentoActual2.getHours()
+                            minuto2 = momentoActual2.getMinutes()
+                            segundo2 = momentoActual2.getSeconds()
+
+                            var mesa_final = hora2 + " : " + minuto2 + " : " + segundo2
+
+                            document.form_r3_final.reloj.value = mesa_final
+
+                            let diferencia = (momentoActual2.getTime() - momentoActual.getTime()) / 1000;
+
+                            t = (diferencia * 50) / 3600;
+
+                            document.getElementById("total3").innerHTML = t.toFixed(2);
+
+
+
+                        }
+
+
+
+
+
+                    }
+                </script>
+
+            </td>
+
+        </tr>
+
+
+        <tr>
+            <td>
+                <p>
+                    Hora de Inicio:
+                </p>
+
+                <form name="form_r1_inicio">
+                    <input type="text" name="reloj" size="10">
+                </form>
+
+                <p>
+                    Hora Final:
+                </p>
+
+                <form name="form_r1_final">
+                    <input type="text" name="reloj" size="10">
+                </form>
+
+                <p>Total:</p>
+                <p id="total1"></p>
+
+            </td>
+
+            <td>
+                <p>
+                    Hora de Inicio:
+                </p>
+
+                <form name="form_r2_inicio">
+                    <input type="text" name="reloj" size="10">
+                </form>
+
+                <p>
+                    Hora Final:
+                </p>
+
+                <form name="form_r2_final">
+                    <input type="text" name="reloj" size="10">
+                </form>
+
+                <p>Total:</p>
+                <p id="total2"></p>
+
+            </td>
+
+            <td>
+                <p>
+                    Hora de Inicio:
+                </p>
+
+                <form name="form_r3_inicio">
+                    <input type="text" name="reloj" size="10">
+                </form>
+
+                <p>
+                    Hora Final:
+                </p>
+
+                <form name="form_r3_final">
+                    <input type="text" name="reloj" size="10">
+                </form>
+
+                <p>Total:</p>
+                <p id="total3"></p>
+
+            </td>
+        </tr>
+
+
+        <tr>
+            <th>
+                <h3>Mesa 4</h3>
+            </th>
+            <th>
+                <h3>Mesa 5</h3>
+            </th>
+            <th>
+                <h3>Mesa 6</h3>
+            </th>
+        </tr>
+
+
+        <tr>
+            <td>
+                <img src="images/mesaApagada.png" id="mesa_4" onclick="cambiarMesa_4();">
+
+                <script>
+                    function cambiarMesa_4() {
+
+                        var t;
+
+
+                        element = document.getElementById("mesa_4")
+
+                        if (element.src.match("mesaApagada")) {
+                            element.src = "images/mesaPrendida.png";
+
+
+                            momentoActual = new Date()
+                            hora = momentoActual.getHours()
+                            minuto = momentoActual.getMinutes()
+                            segundo = momentoActual.getSeconds()
+
+                            var mesa_inicio = hora + " : " + minuto + " : " + segundo
+
+                            document.form_r4_inicio.reloj.value = mesa_inicio
+
+
+
+                        }
+                        else {
+                            element.src = "images/mesaApagada.png";
+
+                            momentoActual2 = new Date()
+                            hora2 = momentoActual2.getHours()
+                            minuto2 = momentoActual2.getMinutes()
+                            segundo2 = momentoActual2.getSeconds()
+
+                            var mesa_final = hora2 + " : " + minuto2 + " : " + segundo2
+
+                            document.form_r4_final.reloj.value = mesa_final
+
+                            let diferencia = (momentoActual2.getTime() - momentoActual.getTime()) / 1000;
+
+                            t = (diferencia * 50) / 3600;
+
+                            document.getElementById("total4").innerHTML = t.toFixed(2);
+
+
+
+                        }
+
+
+
+
+
+                    }
+                </script>
+
+            </td>
+
+            <td>
+                <img src="images/mesaApagada.png" id="mesa_5" onclick="cambiarMesa_5();">
+
+                <script>
+                    function cambiarMesa_5() {
+
+                        var t;
+
+
+                        element = document.getElementById("mesa_5")
+
+                        if (element.src.match("mesaApagada")) {
+                            element.src = "images/mesaPrendida.png";
+
+
+                            momentoActual = new Date()
+                            hora = momentoActual.getHours()
+                            minuto = momentoActual.getMinutes()
+                            segundo = momentoActual.getSeconds()
+
+                            var mesa_inicio = hora + " : " + minuto + " : " + segundo
+
+                            document.form_r5_inicio.reloj.value = mesa_inicio
+
+
+
+                        }
+                        else {
+                            element.src = "images/mesaApagada.png";
+
+                            momentoActual2 = new Date()
+                            hora2 = momentoActual2.getHours()
+                            minuto2 = momentoActual2.getMinutes()
+                            segundo2 = momentoActual2.getSeconds()
+
+                            var mesa_final = hora2 + " : " + minuto2 + " : " + segundo2
+
+                            document.form_r5_final.reloj.value = mesa_final
+
+                            let diferencia = (momentoActual2.getTime() - momentoActual.getTime()) / 1000;
+
+                            t = (diferencia * 50) / 3600;
+
+                            document.getElementById("total5").innerHTML = t.toFixed(2);
+
+
+
+                        }
+
+
+
+
+
+                    }
+                </script>
+
+            </td>
+
+            <td>
+                <img src="images/mesaApagada.png" id="mesa_6" onclick="cambiarMesa_6();">
+
+                <script>
+                    function cambiarMesa_6() {
+
+                        var t;
+
+
+                        element = document.getElementById("mesa_6")
+
+                        if (element.src.match("mesaApagada")) {
+                            element.src = "images/mesaPrendida.png";
+
+
+                            momentoActual = new Date()
+                            hora = momentoActual.getHours()
+                            minuto = momentoActual.getMinutes()
+                            segundo = momentoActual.getSeconds()
+
+                            var mesa_inicio = hora + " : " + minuto + " : " + segundo
+
+                            document.form_r6_inicio.reloj.value = mesa_inicio
+
+
+
+                        }
+                        else {
+                            element.src = "images/mesaApagada.png";
+
+                            momentoActual2 = new Date()
+                            hora2 = momentoActual2.getHours()
+                            minuto2 = momentoActual2.getMinutes()
+                            segundo2 = momentoActual2.getSeconds()
+
+                            var mesa_final = hora2 + " : " + minuto2 + " : " + segundo2
+
+                            document.form_r6_final.reloj.value = mesa_final
+
+                            let diferencia = (momentoActual2.getTime() - momentoActual.getTime()) / 1000;
+
+                            t = (diferencia * 50) / 3600;
+
+                            document.getElementById("total6").innerHTML = t.toFixed(2);
+
+
+
+                        }
+
+
+
+
+
+                    }
+                </script>
+
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <p>
+                    Hora de Inicio:
+                </p>
+
+                <form name="form_r4_inicio">
+                    <input type="text" name="reloj" size="10">
+                </form>
+
+                <p>
+                    Hora Final:
+                </p>
+
+                <form name="form_r4_final">
+                    <input type="text" name="reloj" size="10">
+                </form>
+
+                <p>Total:</p>
+                <p id="total4"></p>
+
+            </td>
+
+            <td>
+                <p>
+                    Hora de Inicio:
+                </p>
+
+                <form name="form_r5_inicio">
+                    <input type="text" name="reloj" size="10">
+                </form>
+
+                <p>
+                    Hora Final:
+                </p>
+
+                <form name="form_r5_final">
+                    <input type="text" name="reloj" size="10">
+                </form>
+
+                <p>Total:</p>
+                <p id="total5"></p>
+
+            </td>
+
+            <td>
+                <p>
+                    Hora de Inicio:
+                </p>
+
+                <form name="form_r6_inicio">
+                    <input type="text" name="reloj" size="10">
+                </form>
+
+                <p>
+                    Hora Final:
+                </p>
+
+                <form name="form_r6_final">
+                    <input type="text" name="reloj" size="10">
+                </form>
+
+                <p>Total:</p>
+                <p id="total6"></p>
+
+            </td>
+        </tr>
+
+
+    </table>
+</body>
+
+</html>
